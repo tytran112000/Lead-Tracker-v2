@@ -20,19 +20,36 @@ const exportBtn = document.getElementById("export-btn")
 const deleteBtn = document.getElementById("delete-btn")
 
 inputBtn.addEventListener("click", function(){
-    myLeadNames.push(nameInputEl.value)
-    myLeadCompany.push(companyInputEl.value)
-    myLeadLinks.push(linkInputEl.value) 
+    if(nameInputEl.value){
+        myLeadNames.push(nameInputEl.value)
+        nameInputEl.value = ""
+        renderName(myLeadNames)
+    } else if (nameInputEl.value != true){
+        myLeadNames.push("N/A")
+        renderName(myLeadNames)
+    }
 
-    nameInputEl.value = ""
-    companyInputEl.value = ""
-    linkInputEl.value = ""
+    if (companyInputEl.value){
+        myLeadCompany.push(companyInputEl.value)
+        companyInputEl.value = ""
+        renderCompany(myLeadCompany)
+    } else if (companyInputEl.value != true){
+        myLeadCompany.push("N/A")
+        renderCompany(myLeadCompany)
+    }
 
+    if (linkInputEl.value){
+        myLeadLinks.push(linkInputEl.value)
+        linkInputEl.value = ""
+        renderLink(myLeadLinks)
+    } else if (linkInputEl.value != true){
+        myLeadLinks.push("N/A")
+        renderLink(myLeadLinks)
+    }
     renderPosition()
-    renderName(myLeadNames)
-    renderCompany(myLeadCompany)
-    renderLink(myLeadLinks)
 })
+
+
 function renderPosition(){
     myLeadPosition ++
     ulElPosition.innerHTML += `
