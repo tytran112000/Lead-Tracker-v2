@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Lead Generator Version 2</title>
+    <title>Lead Tracker Version 2</title>
 </head>
 <body>
-    <div class="logo">Lead Generate</div>
+    <div class="logo">Leads Track</div>
     <div class="input-fields">
         <input placeholder="Name" type="text" id="name-input-el" required>
         <input placeholder="Company" type="text" id="company-input-el" required>
@@ -23,34 +23,23 @@
         <button id="export-btn">EXPORT TO CSV</button>
         <button id="delete-btn">DELETE ALL</button>
     </div>
-    <table class="leads-container">
-        <thead>
-            <tr>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Company
-                </th>
-                <th>
-                    Link
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td id="ul-el-name">
-    
-                </td>
-                <td id="ul-el-company">
-    
-                </td>
-                <td id="ul-el-link">
-    
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="leads-container">
+        <h3 class="lead-header-title">Here are your leads</h3>
+            <ul>
+                <li id="ul-el-position">
+                    
+                </li>
+                <li id="ul-el-name">
+                    
+                </li>
+                <li id="ul-el-company">
+                    
+                </li>
+                <li id="ul-el-link">
+                    
+                </li>
+            </ul>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
