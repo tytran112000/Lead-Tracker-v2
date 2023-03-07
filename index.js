@@ -2,7 +2,7 @@
 let myLeadNames = []
 let myLeadCompany = []
 let myLeadLinks = []
-let myLeadPosition = 0
+let myLeadPosition = 1
 let myLeadPositionArray = []
 
 const nameInputEl = document.getElementById("name-input-el")
@@ -93,7 +93,7 @@ function renderPosition(position){
     let listItemsPosition = ""
     for (let i = 0; i < position.length; i ++){
         listItemsPosition += `
-                <p id="child">${position[i]+1}</i>
+                <p id="child">${position[i]}</i>
         `
     }
     ulElPosition.innerHTML = listItemsPosition
@@ -140,7 +140,7 @@ deleteBtn.addEventListener("dblclick", function() {
     myLeadCompany = []
     myLeadLinks = []
     myLeadPositionArray = []
-    myLeadPosition = -1
+    myLeadPosition = 0
     renderName(myLeadNames)
     renderCompany(myLeadCompany)
     renderLink(myLeadLinks)
