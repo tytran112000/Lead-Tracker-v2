@@ -23,23 +23,32 @@
         <button id="export-btn">EXPORT TO CSV</button>
         <button id="delete-btn">DELETE ALL</button>
     </div>
-    <div class="leads-container">
-        <h3 class="lead-header-title">Here are your leads</h3>
-            <ul>
-                <li id="ul-el-position">
+    <table class="leads-container">
+        <thead>
+            <tr class="table-header">
+                <th id="position">No.</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-content">
+                <td id="ul-el-position">
                     
-                </li>
-                <li id="ul-el-name">
+                </td>
+                <td id="ul-el-name">
                     
-                </li>
-                <li id="ul-el-company">
+                </td>
+                <td id="ul-el-company">
                     
-                </li>
-                <li id="ul-el-link">
+                </td>
+                <td id="ul-el-link">
                     
-                </li>
-            </ul>
-    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <script src="index.js"></script>
 </body>
 </html>

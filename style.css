@@ -55,35 +55,41 @@ button {
     margin-bottom: 0.5em;
 }
 .leads-container{
+    width: 800px ;
+}
+.leads-container{
     margin-top: 2em;
     border: 1px solid #5f9341;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
-.lead-header-title h3{
-    font-size: 1em;
+table{
+    border-spacing: 0px;
 }
-.lead-header-title{
-
-    background: #5f9341;
+thead{
+    text-align: left;
+    background-color: #5f9341;
     color: white;
-    padding: 10px;
 }
-ul{
-    display: flex;
-    list-style-type: none;
-    column-gap: 2em;
+th{
+    padding: 10px 0 10px 10px;
 }
-li:nth-child(2), li:nth-child(3), li:nth-child(4){
+
+p{
+    margin: 0;
+    padding-left: 10px;
+}
+#ul-el-company{
     border-left: 1px solid #5f9341;
 }
-li:nth-child(3){
-    flex-grow: 1;
+#ul-el-position{
+    width: 40px;
+    border-right: 1px solid #5f9341;
 }
-
-li > p, li > a{
-    padding: 10px;
-}
- 
 a {
+    border-left: 1px solid #5f9341;
+    padding-left: 10px;
+    max-height: 20px;
     color: black;
     text-decoration: none;
     display: block;
