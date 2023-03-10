@@ -2,7 +2,7 @@
 let myLeadNames = []
 let myLeadCompany = []
 let myLeadLinks = []
-let myLeadPosition = 1
+let myLeadPosition = 0
 let myLeadPositionArray = []
 
 const nameInputEl = document.getElementById("name-input-el")
@@ -73,12 +73,15 @@ inputBtn.addEventListener("click", function(){
         myLeadPositionArray.push(myLeadPosition)
         localStorage.setItem("myLeadPositionArray", JSON.stringify(myLeadPositionArray))
         renderPosition(myLeadPositionArray)
-
+        
         myLeadLinks.push(linkInputEl.value)
         linkInputEl.value = ""
         localStorage.setItem("myLeadLinks", JSON.stringify(myLeadLinks))
         renderLink(myLeadLinks)
     } else if (linkInputEl.value != true){
+        myLeadPositionArray.push(myLeadPosition)
+        localStorage.setItem("myLeadPositionArray", JSON.stringify(myLeadPositionArray))
+        renderPosition(myLeadPositionArray)
         myLeadLinks.push("N/A")
         localStorage.setItem("myLeadLinks", JSON.stringify(myLeadLinks))
         renderLink(myLeadLinks)
